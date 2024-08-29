@@ -1,31 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter Subscription</title>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+         .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 640px; 
+            height: 280px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+      
+    </style>
 </head>
 <body>
-   <div class="newsletter-container">
-    
-    <div class="content-box">
-        <div class="logo">
-            <img src="./image/logo1.png" alt="Company Logo">
+    <div class="newsletter-container">
+        <div class="content-box">
+            <div class="logo">
+                <img src="./image/logo1.png" alt="Company Logo">
+            </div>
+            <p class="desc-one">Únete a nuestro boletín y recibe notificaciones sobre soluciones innovadoras que transforman la industria.</p>
+            <h2 class="desc-one">Ingrese el correo electrónico aquí</h2>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Id" required>
+                <button onclick="sendEmail()">Suscribirse</button>
+            </div>
         </div>
-        <p class="desc-one">Únete a nuestro boletín y recibe notificaciones sobre soluciones innovadoras que transforman la industria.</p>
-        <h2  class="desc-one" >Ingrese el correo electrónico aquí</h2>
-        <div class="input-group">
-            <input type="email" placeholder="Email Id">
-            <button>Suscribirse</button>
+        <div class="image-box">
+            <img src="./image/image1.png" alt="People Image" class="people-image">
         </div>
     </div>
-    <div class="image-box">
-        <img src="./image/image1.png" alt="People Image" class="people-image">
-    </div>
-</div>
 
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        function sendEmail() {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value;
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                const emailBody = `Email: ${email}`;
+                const mailtoLink = `mailto:tripty.dhanuk@delostylestudio.com?subject=Newsletter Subscription&body=${encodeURIComponent(emailBody)}`;
+                // window.open(mailtoLink, '_blank');
+                
+                showModal(
+                    `<img src="./image/alert2.png" alt="alert2" class="alert2"/>` +
+                    `<h2 class="alert-head2">Thank you for registering</h2>` +
+                    `<p class="alert-para2">We have received your request and we will contact you soon.</p>`
+                );
+            } else {
+                showModal(
+                    `<img src="./image/alert1.png" alt="alert1" class="alert1"/>` +
+                    `<h2 class="alert-head">Please enter a valid email address</h2>` +
+                    `<p class="alert-para">You have not entered a valid email address. Please provide a valid email id and we will contact you soon.</p>`
+                );
+            }
+        }
+
+        function showModal(message) {
+            const modal = document.getElementById('alertModal');
+            const modalMessage = document.getElementById('modalMessage');
+            modalMessage.innerHTML = message; 
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('alertModal');
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('alertModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
