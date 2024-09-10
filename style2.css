@@ -1,0 +1,522 @@
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('./image/img1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh !important;
+    width: 100vw !important;
+    overflow: hidden;
+
+}
+
+.container-two {
+
+    /* padding: 20px; */
+    /* width: 915px; */
+    height: 100vh;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 20px; */
+    overflow: hidden;
+    display: flex;
+    width : 100% !important;
+    /* justify-content: flex-end; Shift to the right */
+}
+
+.bg-card {
+    /* padding: 20px; */
+
+    width: 48%;
+    height: 100vh;
+    background-color: #FFFFFFD4;
+    opacity: 75%;
+    position: absolute;
+    left: -10px;
+    right: 500px;
+    /* top: 0; */
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start; 
+    border-radius: 20px;
+}
+
+.bg-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: url('./image/overlay.jpg') no-repeat;
+    background-size: cover; */
+    opacity: 30%;
+    z-index: -1; /* Ensure the image is behind the content */
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Make sure it stays relative to bg-card */
+   /* top: 265px;*/
+   /* margin-right: 280px; */
+    left: -10px;
+    /* gap: 60px; */
+    /* margin-top: 12%; */
+    display: column;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  /*  justify-content: flex-end;*/ /* Shift to the right */
+}
+.text-class {
+    width: 100%; /* Ensure it takes full width of its parent container */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center text inside the container */
+}
+
+.info {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29.26px;
+    color:#111520;
+    width: 100%; /* Set to full width of the container */
+    max-width: 500px; /* Optional: Limit maximum width for better readability */
+    word-wrap: break-word; /* Ensure long words wrap correctly */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.bold-para {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 39.01px;
+    color: #111520;
+    width: 100%; /* Set to full width of the container */
+    max-width: 500px; /* Optional: Limit maximum width for better readability */
+    word-wrap: break-word; /* Ensure long text wraps correctly */
+    margin: 0 auto; /* Center the paragraph */
+}
+.logo {
+    position: relative; /* Allows you to move it relative to its normal position */
+    top: -80px; /* Moves the logo 20px upwards */
+    right: -20px; /* Moves the logo 20px to the right */
+    margin-bottom: 20px; /* Optional: Add space below the logo */
+}
+
+.chat-logo {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Ensures the logo remains responsive */
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    position: relative;
+    /* margin-right: 40px; */
+    margin-top: 55px;
+    z-index: 90;
+    opacity: 100%;
+    width: 100% ;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px 16px;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    outline: none;
+    width: 380px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 2px;
+    z-index: 20;
+    color: black;
+}
+
+.newsletter button {
+    padding: 12px 16px;
+    background-color: #5D6651;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 46px;
+    width: 200px;
+    font-size: 18px;
+    margin-left: -54px;
+    z-index: 20;
+}
+
+.newsletter input[type="email"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+@media screen and (max-width : 1024px) {
+    .content{
+        h2{
+            font-size: 33px;
+            line-height: 47px;
+        }
+
+    .info{
+     font-size: 14px;
+     white-space: wrap;
+     /* max-width: 320px; */
+     
+    }
+    .newsletter input[type="email"] {
+        background-color: #242424;
+       width: 50%;
+	color:white;
+    }
+    .newsletter input[type="email"]::placeholder {
+    color: grey;
+    font-style: italic;
+}
+.newsletter button {
+    width: 42%;
+    font-size: 16px;
+}
+
+    }
+}
+
+h1 {
+    color: #009CEF;
+    font-size: 45px;
+    margin-bottom: 10px;
+    justify-content: flex-end
+}
+.alert-head{
+    font-family: Montserrat;
+font-size: 24px;
+font-weight: 600;
+line-height: 20.26px;
+text-align: center;
+color: #1E1E1E;
+
+}
+.alert-para{
+font-family: Montserrat;
+font-size: 18px;
+
+margin-top: 10px;
+text-align: center;
+
+}
+.alert1{
+width: 85px;
+height: 60px;
+margin-top: 20px;
+align-items: center;
+justify-content: center;
+}
+.alert-head2{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: center;    
+color: #1E1E1E;
+
+}
+.alert-para2{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.94px;
+    text-align: center;
+    
+
+}
+.alert2{
+width: 80px;
+height: 70px;
+margin-top: 20px;
+align-items: center;
+justify-content: center;
+}
+.logo{
+    width : 100% !important;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-right: 10%;
+    margin-top: -70px;
+    margin-bottom: 50px;
+    
+}
+
+.logo img {
+    width: 330px;
+    height: 196px;
+    top: 0px;
+    left: 433px;
+   
+    /* margin-bottom: 10px;
+    /* margin-left: 25%; */
+   
+}
+
+h2 {
+    color: #009CEF;
+    font-family: Montserrat;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 68.26px;
+    text-align: center;
+    /* padding: 10px; */
+    /* margin-right: 45px; */
+    justify-content: flex-end;
+    width : 100% !important;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 20px;
+    color: #1E1E1E;
+   /* margin-left: 2%;*/
+    margin-top: 5px;
+    gap: 0px;
+    justify-content: flex-end
+}
+.text-class{
+
+    margin-top: 5px;
+}
+
+
+
+.info {
+    margin-bottom: 20px;
+    width: 700px;
+    white-space: normal;
+    text-align: center;
+}
+
+@media screen and (max-width : 1066px) {
+    .info{
+        width : 528px !important;
+    }
+}
+
+/* Adjust logo and content for screens 768px and below */
+@media screen and (max-width: 768px) {
+ 
+    .bg-card{
+        border-radius: 20px;
+        width: 100vh;
+        left: 0px;
+    }
+    .logo {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative; 
+        top: 0; 
+    }
+    
+    .logo img {
+        width: 100px;
+        height: 80px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .bg-card {
+        bottom: 0 !important;
+        height: 58vh;
+        width: 100vw !important;
+    }
+
+    .content {
+        justify-content: flex-start;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text-class {
+        width: 80%; 
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .info {
+        font-size: 18px;
+        width: 100%; 
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .bold-para {
+        font-size: 20px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .newsletter {
+        width: 82% !important;
+        margin-top: 15px;
+    }
+
+    .newsletter input[type="email"] {
+        padding: 12px 16px;
+        font-size: 18px;
+        border: 1px solid #D1D1D1;
+        border-radius: 16px;
+        background-color: black;
+        outline: none;
+        width: 100%; 
+        max-width: 450px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: white; 
+    }
+}
+
+@media screen and (max-width: 718px) {
+    .newsletter {
+        width: 80% !important;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .info {
+        font-size: 12px;
+        width: 365px !important;
+        margin-bottom: 9px;
+        margin-top: 0px;
+    }
+
+    .bold-para {
+        font-size: 16px;
+        width: 100%; 
+    }
+
+    .newsletter {
+        margin-top: 0px !important;
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 380px) {
+    .text-class {
+        white-space: normal;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .info {
+        font-size: 12px;
+        width: 100%;
+        max-width: 300px;
+        margin-left: 22px; 
+        text-align: center;
+        white-space: normal;
+    }
+
+    .bold-para {
+        font-size: 14px;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 14px;
+        padding: 14px 12px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .text-class {
+        white-space: normal;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .info {
+        font-size: 12px;
+        width: 100%;
+        max-width: 325px;
+        margin-left: 20px; 
+        text-align: center;
+        white-space: normal;
+    }
+
+    .bold-para {
+        font-size: 14px;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 14px;
+        padding: 14px 12px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .text-class {
+        white-space: normal;
+        width: 100%; /* Take full width */
+        margin-right: 0; /* Remove any margin-right */
+        text-align: center;
+    }
+
+    .info {
+        font-size: 12px;
+        width: 100%; /* Take full width */
+        max-width: 250px; /* Ensure max-width to fit within screen */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center;
+        white-space: normal; /* Allow wrapping */
+    }
+
+    .bold-para {
+        font-size: 14px;
+        width: 100%; /* Take full width */
+        max-width: 250px; /* Ensure max-width to fit within screen */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center;
+        white-space: normal; /* Allow wrapping */
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 14px;
+        padding: 14px 12px;
+        width: 100%;
+    }
+}
+
+
+
+
